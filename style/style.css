@@ -1,0 +1,1297 @@
+:root {
+    --color-background-1: #b1b1b1;
+    --color-background-2: #ffffff;
+    --color-text: #232323;
+    --color-sub1: #718ebf;
+    --color-sub2: #1814f3;
+    --color-sub3: #396aff;
+    --color-sub4: #333b69;
+    --color-sub5: #ffbb38;
+    --color-sub6: #ff82ac;
+    --color-sub7: #fe5c73;
+    --color-sub8: #16dbcc;
+    --color-sub9: #dfeaf2;
+    --color-sub10: #f5f7fa;
+    --color-sub11: #343c6a;
+    --color-sub12: #8ba3cb;
+    --color-sub13: #e7edff;
+    --color-sub14: #c5c5cf;
+    --color-sub15: #fff5d9;
+    --color-sub16: #dcfaf8;
+    --color-sub17: #ffe0eb;
+    --color-sub18: #ffb11f;
+    --color-sub19: #ff6195;
+    --color-sub20: #1ec6b8;
+    --color-sub21: #3464f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    /* box-sizing: border-box; */
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--color-sub10);
+}
+
+/* sidebar section start */
+
+.container {
+    display: flex;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+aside {
+    width: 250px;
+    min-height: 100vh;
+    background-color: var(--color-background-2);
+    top: 0;
+    padding: 0 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+aside .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+aside .toggle .logo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--color-sub11);
+}
+
+aside .toggle .logo i {
+    font-size: 35px;
+    color: var(--color-sub2);
+}
+
+aside .toggle .logo h2 {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: "Mont", sans-serif;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 211px;
+    height: calc(100vh - 100px);
+    margin-top: 1rem;
+    position: relative;
+}
+
+aside .sidebar a {
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-background-1);
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Left bar indicator for hover and active states */
+aside .sidebar a:hover::before,
+aside .sidebar .active::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--color-sub2);
+    border-radius: 0 4px 4px 0;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* Active state styling */
+aside .sidebar .active {
+    color: var(--color-sub2);
+    background-color: rgba(59, 130, 246, 0.1);
+    /* subtle background highlight */
+    border-radius: 8px 0 0 8px;
+}
+
+/* Hover state styling */
+aside .sidebar a:hover {
+    color: var(--color-sub2);
+    background-color: rgba(59, 130, 246, 0.05);
+    /* lighter hover background */
+    border-radius: 8px 0 0 8px;
+    margin-left: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+/* sidebar section end */
+
+/* main */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* navbar section start */
+.navbar {
+    width: 1190px;
+    height: 100px;
+    background-color: var(--color-background-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-header h3 {
+    font-size: 25px;
+    color: var(--color-sub11);
+    margin: 0;
+}
+
+.navbar-extra {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    background-color: #f5f7fa;
+    justify-content: center;
+    width: 255px;
+    height: 50px;
+    border-radius: 40px;
+    color: var(--color-sub12);
+    font-size: 15px;
+    gap: 10px;
+}
+
+.navbar-search a {
+    display: flex;
+    align-items: center;
+    color: var(--color-sub12);
+    font-size: 25px;
+}
+
+.navbar-search p {
+    display: flex;
+    align-items: center;
+    color: var(--color-sub12);
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.navbar-setting,
+.navbar-notification {
+    width: 50px;
+    height: 50px;
+    background-color: #f5f7fa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-setting,
+.navbar-notification i {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-setting i {
+    color: var(--color-sub12);
+}
+
+.navbar-notification i {
+    color: var(--color-sub7);
+}
+
+.navbar-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* navbar section end */
+
+/* main-content */
+
+.main-content {
+    padding: 1rem;
+    background-color: var(--color-sub10);
+    margin-left: 1rem;
+}
+
+/* my card section start */
+
+/* first card */
+.my-cards {
+    width: 1190px;
+    height: 300px;
+    justify-content: space-between
+}
+
+.my-cards .mycard-header h3 {
+    font-size: 1.5rem;
+    color: var(--color-sub11);
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+}
+
+.my-cards .cards {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards .card-one {
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(135deg, #396aff, #00c6ff);
+    border-radius: 20px;
+    padding: 1rem;
+    color: white;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.01);
+}
+
+.cards .card-one .card-top,
+.cards .card-one .card-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards .card-one .card-top .balance p {
+    font-size: 12px;
+}
+
+.cards .card-one .card-top .balance h4 {
+    font-size: 20px;
+    margin-top: 0.2rem;
+}
+
+.cards .card-one .card-top .chip i {
+    font-size: 35px;
+    color: var(--color-background-2);
+}
+
+.cards .card-one .card-middle .holder p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.cards .card-one .card-middle .holder h4 {
+    font-size: 15px;
+    margin-top: 0.2;
+}
+
+.cards .card-one .card-middle .valid p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.cards .card-one .card-middle .valid h4 {
+    font-size: 15px;
+    margin-top: 0.2;
+}
+
+.cards .card-one .card-bottom {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 -1rem -1rem -1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards .card-one .card-bottom .card-number h3 {
+    letter-spacing: 2px;
+}
+
+.cards .card-one .card-bottom .mastercard {
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card-one .card-bottom .mastercard i {
+    font-size: 3rem;
+}
+
+/* second card */
+
+.cards .card-two {
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(-135deg, #1d2bff, #556cff);
+    border-radius: 20px;
+    padding: 1rem;
+    color: white;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.01);
+}
+
+.cards .card-two .card-top,
+.cards .card-two .card-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards .card-two .card-top .balance p {
+    font-size: 12px;
+}
+
+.cards .card-two .card-top .balance h4 {
+    font-size: 20px;
+    margin-top: 0.2rem;
+}
+
+.cards .card-two .card-top .chip i {
+    font-size: 35px;
+    color: var(--color-background-2);
+}
+
+.cards .card-two .card-middle .holder p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.cards .card-two .card-middle .holder h4 {
+    font-size: 15px;
+    margin-top: 0.4;
+}
+
+.cards .card-two .card-middle .valid p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.cards .card-two .card-middle .valid h4 {
+    font-size: 15px;
+    margin-top: 0.4;
+}
+
+.cards .card-two .card-bottom {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 -1rem -1rem -1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards .card-two .card-bottom .card-number h3 {
+    letter-spacing: 2px;
+}
+
+.cards .card-two .card-bottom .mastercard {
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card-two .card-bottom .mastercard i {
+    font-size: 3rem;
+}
+
+/* third card */
+
+.cards .card-three {
+    width: 350px;
+    height: 200px;
+    background: var(--color-background-2);
+    border-radius: 20px;
+    padding: 1rem;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.01);
+}
+
+.cards .card-three .card-top,
+.cards .card-three .card-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards .card-three .card-top .balance p {
+    font-size: 12px;
+    color: var(--color-sub1);
+}
+
+.cards .card-three .card-top .balance h4 {
+    font-size: 20px;
+    margin-top: 0.2rem;
+    color: var(--color-sub11);
+}
+
+.cards .card-three .card-top .chip i {
+    font-size: 35px;
+    color: var(--color-background-1);
+}
+
+.cards .card-three .card-middle .holder p {
+    font-size: 12px;
+    color: var(--color-background-1);
+}
+
+.cards .card-three .card-middle .holder h4 {
+    font-size: 15px;
+    margin-top: 0.2;
+}
+
+.cards .card-three .card-middle .valid p {
+    font-size: 12px;
+    color: var(--color-background-1);
+}
+
+.cards .card-three .card-middle .valid h4 {
+    font-size: 15px;
+    margin-top: 0.2;
+}
+
+.cards .card-three .card-bottom {
+    border-top: 0.1px solid var(--color-sub11);
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 -1rem -1rem -1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards .card-three .card-bottom .card-number h3 {
+    letter-spacing: 2px;
+}
+
+.cards .card-three .card-bottom .mastercard {
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card-three .card-bottom .mastercard i {
+    font-size: 3rem;
+    color: var(--color-background-1);
+}
+
+/* my card section end */
+
+.second-content {
+    width: 1190px;
+    display: flex;
+    /* background-color: #b1b1b1; */
+    gap: 3rem;
+    box-sizing: border-box;
+}
+
+/* card expense statistic section start */
+
+.card-expense {
+    width: 360px;
+    height: 360px;
+    /* background-color: #b1b1b1; */
+}
+
+.card-expense .header h3 {
+    font-size: 1.5rem;
+    color: var(--color-sub11);
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+}
+
+.card-expense .content {
+    width: 360px;
+    height: 310px;
+    background-color: var(--color-background-2);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-expense .content .chart-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 8px;
+    position: relative;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.card-expense .content .chart-container .pie-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(var(--color-sub8) 25% 25%,
+            var(--color-sub6) 25% 50%,
+            var(--color-sub5) 25% 75%,
+            var(--color-sub3) 25% 100%);
+}
+
+.card-expense .content .chart-container .pie-chart-small {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: conic-gradient(var(--color-sub20) 25% 25%,
+            var(--color-sub19) 25% 50%,
+            var(--color-sub18) 25% 75%,
+            var(--color-sub21) 25% 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.card-expense .content .chart-container .center-circle {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2c3e50;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.card-expense .content .legend {
+    width: 179px;
+    height: 42px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.card-expense .content .legend .legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-sub1);
+}
+
+.card-expense .content .legend .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.dbl-bank {
+    background-color: var(--color-sub3);
+}
+
+.brc-bank {
+    background-color: var(--color-sub6);
+}
+
+.abm-bank {
+    background-color: var(--color-sub8);
+}
+
+.mcp-bank {
+    background-color: var(--color-sub5);
+}
+
+/* card expense statistic section end */
+
+/* card list section start */
+
+.card-list {
+    width: 782px;
+    height: 310px;
+}
+
+.card-list .header h3 {
+    font-size: 1.5rem;
+    color: var(--color-sub11);
+    font-weight: 600;
+}
+
+/* card list 1 section start */
+
+.card-list .content .box-one {
+    width: 782px;
+    height: 90px;
+    background-color: var(--color-background-2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0 1.25rem 0;
+    ;
+    /* justify-content: center; */
+    /* gap: 2rem; */
+}
+
+.card-list .content h4 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card-list .content p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-sub14);
+    margin-top: 0.4rem;
+}
+
+.card-list .content .box-one .icon-wallet {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub13);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list .content .box-one .icon-wallet i {
+    font-size: 2rem;
+    color: var(--color-sub2);
+}
+
+.card-list .content .box-one .card-detail {
+    color: var(--color-sub2);
+    cursor: pointer;
+}
+
+/* card list 1 section end */
+/* card list 2 section start */
+
+.card-list .content .box-two {
+    width: 782px;
+    height: 90px;
+    background-color: var(--color-background-2);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0 1.25rem 0;
+    /* justify-content: center; */
+    /* gap: 2rem; */
+}
+
+.card-list .content h4 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card-list .content p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-sub14);
+    margin-top: 0.4rem;
+}
+
+.card-list .content .box-two .icon-wallet {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub17);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list .content .box-two .icon-wallet i {
+    font-size: 2rem;
+    color: var(--color-sub7);
+}
+
+.card-list .content .box-two .card-detail {
+    color: var(--color-sub2);
+    cursor: pointer;
+}
+
+/* card list 2 section end */
+/* card list 3 section start */
+
+.card-list .content .box-three {
+    width: 782px;
+    height: 90px;
+    background-color: var(--color-background-2);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0 1rem 0;
+    /* justify-content: center; */
+    /* gap: 2rem; */
+}
+
+.card-list .content h4 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card-list .content p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-sub14);
+    margin-top: 0.4rem;
+}
+
+.card-list .content .box-three .icon-wallet {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub15);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list .content .box-three .icon-wallet i {
+    font-size: 2rem;
+    color: var(--color-sub5);
+}
+
+.card-list .content .box-three .card-detail {
+    color: var(--color-sub2);
+    cursor: pointer;
+
+}
+
+/* card list 3 section end */
+/* card list section end */
+
+.third-content {
+    width: 1190px;
+    height: 506px;
+    display: flex;
+    gap: 3rem;
+    margin-top: 20px;
+}
+
+/* add new card section start */
+
+.add-card {
+    width: 730px;
+    /* height: 456px; */
+}
+
+.add-card .header h3 {
+    font-size: 22px;
+    color: var(--color-sub11);
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+}
+
+.add-card .content {
+    width: 780px;
+    height: 440px;
+    background-color: var(--color-background-2);
+    border-radius: 25px;
+}
+
+.add-card .content .ac-info {
+    width: 633px;
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.add-card .content .ac-info p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+
+.add-card .content .row-1,
+.add-card .content .row-2 {
+    display: flex;
+    width: 320px;
+    height: 80px;
+    gap: 29px;
+    margin-left: 23px;
+    margin-bottom: 20px;
+}
+
+/* left */
+
+.add-card .content .row-1 h4,
+.add-card .content .row-2 h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.add-card .content .row-1 input,
+.add-card .content .row-2 input {
+    width: 320px;
+    height: 50px;
+    border: 0.5px solid var(--color-sub1);
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-sub1);
+    margin-top: 11px;
+    opacity: 50%;
+}
+
+.add-card .content .row-1 input::placeholder,
+.add-card .content .row-2 input::placeholder {
+    font-size: 15px;
+    color: var(--color-sub1);
+}
+
+/* add new card section end */
+
+/* card setting section start */
+
+.card-setting {
+    width: 370px;
+    height: 556px;
+    margin-left: 40px;
+}
+
+.card-setting .header h3 {
+    font-size: 22px;
+    color: var(--color-sub11);
+    font-weight: 600;
+}
+
+.card-setting .content {
+    width: 370px;
+    height: 440px;
+    background-color: var(--color-background-2);
+    border-radius: 25px;
+}
+
+/* block card*/
+
+.card-setting .content .block-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 1rem 0 1rem;
+    padding: 0.5rem;
+}
+
+.card-setting .content .block-card .i-block {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card-setting .content .block-card .i-block i {
+    font-size: 2rem;
+    color: var(--color-sub5);
+}
+
+.card-setting .content .block-card .h-block h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.card-setting .content .block-card .h-block p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.4rem;
+}
+
+/* change pin lock */
+
+.card-setting .content .change-pin {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+    padding: 0.5rem;
+}
+
+.card-setting .content .change-pin .i-change {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub13);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-setting .content .change-pin .i-change i {
+    font-size: 2rem;
+    color: var(--color-sub3);
+}
+
+.card-setting .content .change-pin .h-change h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-setting .content .change-pin .h-change p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.4rem;
+}
+
+/* add to google pay */
+
+
+.card-setting .content .google-pay {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+    padding: 0.5rem;
+}
+
+.card-setting .content .google-pay .i-google {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub17);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-setting .content .google-pay .i-google i {
+    font-size: 2rem;
+    color: var(--color-sub7);
+}
+
+.card-setting .content .google-pay .h-google h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-setting .content .google-pay .h-google p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.4rem;
+}
+
+/* add to apple pay */
+
+
+.card-setting .content .apple-pay {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+    padding: 0.5rem;
+}
+
+.card-setting .content .apple-pay .i-pay {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub16);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-setting .content .apple-pay .i-pay i {
+    font-size: 2rem;
+    color: var(--color-sub8);
+}
+
+.card-setting .content .apple-pay .h-pay h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-setting .content .apple-pay .h-pay p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.4rem;
+}
+
+/* add to apple store */
+
+
+.card-setting .content .apple-store {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+    padding: 0.5rem;
+}
+
+.card-setting .content .apple-store .i-store {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-sub16);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-setting .content .apple-store .i-store i {
+    font-size: 2rem;
+    color: var(--color-sub8);
+}
+
+.card-setting .content .apple-store .h-store h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-setting .content .apple-store .h-store p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.4rem;
+}
+
+.btn {
+    display: flex;
+    width: 190px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-sub2);
+    color: var(--color-background-2);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+}
+
+/* card setting section end */
+
+/* Previous CSS styles remain the same until the end */
+
+/* ============================================= */
+/* RESPONSIVE DESIGN - TABLET (1024px) */
+/* ============================================= */
+@media (max-width: 1024px) {
+
+    /* Adjust sidebar */
+    .sidebar-container {
+        width: 220px;
+    }
+
+    /* Adjust main content margin */
+    main {
+        margin-left: 220px;
+    }
+
+    /* Adjust card sizes */
+    .cards .card {
+        width: 300px;
+    }
+
+    /* Stack second content on smaller tablets */
+    .second-content {
+        flex-direction: column;
+    }
+
+    .card-expense,
+    .card-list {
+        width: 100%;
+    }
+
+    /* Adjust card list items */
+    .card-list .content .box .card-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Adjust third content layout */
+    .third-content {
+        flex-direction: column;
+    }
+
+    .add-card,
+    .card-setting {
+        width: 100%;
+    }
+}
+
+/* ============================================= */
+/* RESPONSIVE DESIGN - TABLET (768px) */
+/* ============================================= */
+@media (max-width: 768px) {
+
+    /* Hide sidebar by default on mobile */
+    .sidebar-container {
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 100;
+        background: white;
+        height: 100vh;
+    }
+
+    .sidebar-container.active {
+        transform: translateX(0);
+    }
+
+    .close-sidebar {
+        display: block;
+    }
+
+    /* Show mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Adjust main content */
+    main {
+        margin-left: 0;
+        padding-top: 60px;
+    }
+
+    /* Adjust navbar */
+    .navbar {
+        height: 80px;
+        padding: 0 1rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 90;
+    }
+
+    .navbar-header h3 {
+        font-size: 20px;
+    }
+
+    .navbar-search {
+        width: 180px;
+    }
+
+    .navbar-search p {
+        display: none;
+    }
+
+    .navbar-profile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Adjust cards layout */
+    .my-cards .cards {
+        justify-content: center;
+    }
+
+    .cards .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Adjust card list items */
+    .card-list .content .box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .card-list .content .box .icon-wallet {
+        margin-bottom: 1rem;
+    }
+
+    .card-list .content .box .card-info {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 1rem;
+    }
+
+    .card-list .content .box .card-detail {
+        width: 100%;
+    }
+
+    .card-list .content .box .card-detail button {
+        width: 100%;
+    }
+
+    /* Adjust form inputs */
+    .add-card .content .row-1>div,
+    .add-card .content .row-2>div {
+        min-width: 100%;
+    }
+
+    /* Adjust settings items */
+    .card-setting .content .setting-item {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* ============================================= */
+/* RESPONSIVE DESIGN - MOBILE (480px) */
+/* ============================================= */
+@media (max-width: 480px) {
+
+    /* Further adjust navbar */
+    .navbar-search {
+        display: none;
+    }
+
+    /* Adjust card layout */
+    .cards .card {
+        height: 180px;
+    }
+
+    /* Adjust card list */
+    .card-list .content .box .card-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust form button */
+    .add-card .content .btn {
+        width: 100%;
+    }
+
+    /* Hide some elements on very small screens */
+    .navbar-setting,
+    .navbar-notification {
+        display: none;
+    }
+}

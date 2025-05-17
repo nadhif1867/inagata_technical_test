@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/mont" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style3.css">
+    <title>Bankku - Test</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- sidebar section start -->
+        <aside>
+            <div class="toggle">
+                <a href="#" class="logo">
+                    <i class='bx bx-wallet-alt'></i>
+                    <h2>Bankku.</h2>
+                </a>
+            </div>
+            <div class="sidebar">
+                <a href="#"><i class='bx bx-home-alt-2'></i>Dashboard</a>
+                <a href="#"><i class='bx bx-credit-card-front'></i>Transactions</a>
+                <a href="#"><i class='bx bx-user'></i>Accounts</a>
+                <a href="#"><i class='bx bx-bitcoin'></i>Investments</a>
+                <a href="credit_card.html"><i class='bx bx-credit-card'></i>Credit Cards</a>
+                <a href="#"><i class='bx bx-dollar-circle'></i>Loans</a>
+                <a href="services.html"><i class='bx bx-cut'></i>Services</a>
+                <a href="#"><i class='bx bx-street-view'></i></i>My Privileges</a>
+                <a href="setting.html" class="active"><i class='bx bx-cog'></i>Setting</a>
+            </div>
+        </aside>
+        <!-- sidebar section end -->
+        <!-- main section start -->
+        <main>
+            <div class="navbar">
+                <div class="navbar-header">
+                    <h3>Setting</h3>
+                </div>
+                <div class="navbar-extra">
+                    <div class="navbar-search">
+                        <a href="#" id="search"><i class="bx bx-search"></i></a>
+                        <p>search for something</p>
+                    </div>
+                    <div class="navbar-setting">
+                        <a href="#" id="setting"><i class="bx bx-cog"></i></a>
+                    </div>
+                    <div class="navbar-notification">
+                        <a href="#" id="notification"><i class="bx bx-bell"></i></a>
+                    </div>
+                    <div class="navbar-profile">
+                        <a href="#" id="img-profile">
+                            <img src="assets/profile.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <!-- Tabs Navigation -->
+                <div class="tabs">
+                    <div class="tab active" data-tab="edit-profile">Edit Profile</div>
+                    <div class="tab" data-tab="preferences">Preferences</div>
+                    <div class="tab" data-tab="security">Security</div>
+                </div>
+
+                <!-- Edit Profile Tab -->
+                <div class="tab-content active" id="edit-profile">
+                    <div class="edit-profile-content">
+                        <div class="edit-section-one-img">
+                            <div class="edit-profile-img">
+                                <img src="assets/profile.png">
+                            </div>
+                            <div class="edit-icon">
+                                <i class="bx bx-pencil"></i>
+                            </div>
+                        </div>
+                        <div class="edit-section-one-form">
+                            <div class="form-1">
+                                <div class="left">
+                                    <h4>Your name</h4>
+                                    <input type="text" placeholder="    Charlene Reed">
+                                </div>
+                                <div class="right">
+                                    <h4>User name</h4>
+                                    <input type="text" placeholder="    Charlene Reed">
+                                </div>
+                            </div>
+                            <div class="form-2">
+                                <div class="left">
+                                    <h4>Email</h4>
+                                    <input type="text" placeholder="    charlenereed@gmail.com">
+                                </div>
+                                <div class="right">
+                                    <h4>Password</h4>
+                                    <input type="password" placeholder="    **********">
+                                </div>
+                            </div>
+                            <div class="form-3">
+                                <div class="left">
+                                    <h4>Date of Birth</h4>
+                                    <input type="text" placeholder="    25 January 1990">
+                                </div>
+                                <div class="right">
+                                    <h4>Present Address</h4>
+                                    <input type="text" placeholder="    San Jose, California, USA">
+                                </div>
+                            </div>
+                            <div class="form-4">
+                                <div class="left">
+                                    <h4>Permanent Address</h4>
+                                    <input type="text" placeholder="    San Jose, California, USA">
+                                </div>
+                                <div class="right">
+                                    <h4>City</h4>
+                                    <input type="text" placeholder="    San Jose">
+                                </div>
+                            </div>
+                            <div class="form-5">
+                                <div class="left">
+                                    <h4>Postal Code</h4>
+                                    <input type="text" placeholder="    45962">
+                                </div>
+                                <div class="right">
+                                    <h4>Country</h4>
+                                    <input type="text" placeholder="    USA">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn">Save</button>
+                </div>
+
+                <!-- Preferences Tab -->
+                <div class="tab-content" id="preferences">
+                    <div class="preferences-content">
+                        <div class="row-1">
+                            <div class="preferences-currency">
+                                <h4>Currency</h4>
+                                <input type="text" placeholder="    USD">
+                            </div>
+                            <div class="preferences-time-zone">
+                                <h4>Time Zone</h4>
+                                <input type="text" placeholder="    (GMT-12:00) International Date Line West">
+                            </div>
+                        </div>
+                        <div class="row-2">
+                            <div class="notification-title">
+                                <h4>Notification</h4>
+                            </div>
+                            <div class="notification-setting">
+                                <div class="notification-1">
+                                    <input type="checkbox">
+                                    <p>I send or receive digita currency</p>
+                                </div>
+                                <div class="notification-2">
+                                    <input type="checkbox">
+                                    <p>I receive merchant order</p>
+                                </div>
+                                <div class="notification-3">
+                                    <input type="checkbox">
+                                    <p>There are recommendation for my account</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn">Save</button>
+                </div>
+
+                <!-- Security Tab -->
+                <div class="tab-content" id="security">
+                    <div class="security-content">
+                        <div class="row-1">
+                            <div class="authentication-title">
+                                <h4>Two-factor Authentication</h4>
+                            </div>
+                            <div class="authentication-setting">
+                                <input type="checkbox">
+                                <p>Enable or disable two factor authentication</p>
+                            </div>
+                        </div>
+                        <div class="row-2">
+                            <div class="change-password-title">
+                                <h4>Change Password</h4>
+                            </div>
+                            <div class="current-pass-setting">
+                                <h4>Current Password</h4>
+                                <input type="password" placeholder="    **********">
+                            </div>
+                            <div class="new-pass-setting">
+                                <h4>New Password</h4>
+                                <input type="password" placeholder="    **********">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn">Save</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+
+</html>
