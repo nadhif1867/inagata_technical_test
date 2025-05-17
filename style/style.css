@@ -1109,189 +1109,96 @@ main {
 
 /* card setting section end */
 
-/* Previous CSS styles remain the same until the end */
+/* RESPONSIVE LAYER                                                      */
+/* ===================================================================== */
 
-/* ============================================= */
-/* RESPONSIVE DESIGN - TABLET (1024px) */
-/* ============================================= */
+/* ----------  TABLET (≤1024px)  -------------------------------------- */
 @media (max-width: 1024px) {
 
-    /* Adjust sidebar */
-    .sidebar-container {
-        width: 220px;
+    /* Sidebar shrinks a little but stays visible */
+    aside {
+        width: 200px;
     }
 
-    /* Adjust main content margin */
-    main {
-        margin-left: 220px;
+    /* Navbar & main sections stretch to full width */
+    .navbar {
+        width: 100%;
+        padding: 0 1.5rem;
     }
 
-    /* Adjust card sizes */
-    .cards .card {
+    .main-content,
+    .second-content,
+    .third-content,
+    .my-cards {
+        width: 100%;
+    }
+
+    /* Card widths scale down slightly */
+    .cards .card-one,
+    .cards .card-two,
+    .cards .card-three {
         width: 300px;
+        height: 180px;
     }
 
-    /* Stack second content on smaller tablets */
-    .second-content {
-        flex-direction: column;
-    }
-
+    /* Statistics & list take full row width */
     .card-expense,
     .card-list {
         width: 100%;
     }
 
-    /* Adjust card list items */
-    .card-list .content .box .card-info {
-        grid-template-columns: repeat(2, 1fr);
+    .card-list .content .box-one,
+    .card-list .content .box-two,
+    .card-list .content .box-three {
+        width: 100%;
     }
 
-    /* Adjust third content layout */
+    /* Forms & settings stretch */
+    .add-card,
+    .add-card .content,
+    .card-setting,
+    .card-setting .content {
+        width: 100%;
+    }
+}
+
+
+/* Tablet Styles (1024px) */
+@media (max-width: 1024px) {
+
+    /* Structure is similar to desktop, ensure content fits */
+    /* Sidebar and main layout generally remain */
+    .cards {
+        flex-wrap: wrap;
+        /* Allow cards to wrap if not enough space */
+        justify-content: center;
+        /* Center cards if they wrap */
+    }
+
+    .card-one,
+    .card-two,
+    .card-three {
+        min-width: 280px;
+        /* Slightly smaller cards if needed */
+    }
+
+    .second-content,
     .third-content {
         flex-direction: column;
+        /* Stack sections */
     }
 
-    .add-card,
-    .card-setting {
-        width: 100%;
-    }
-}
-
-/* ============================================= */
-/* RESPONSIVE DESIGN - TABLET (768px) */
-/* ============================================= */
-@media (max-width: 768px) {
-
-    /* Hide sidebar by default on mobile */
-    .sidebar-container {
-        transform: translateX(-100%);
-        position: fixed;
-        z-index: 100;
-        background: white;
-        height: 100vh;
+    .card-list .content>div {
+        justify-content: space-between;
+        /* Better distribute items in card list rows */
     }
 
-    .sidebar-container.active {
-        transform: translateX(0);
-    }
-
-    .close-sidebar {
-        display: block;
-    }
-
-    /* Show mobile menu toggle */
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
-    /* Adjust main content */
-    main {
-        margin-left: 0;
-        padding-top: 60px;
-    }
-
-    /* Adjust navbar */
-    .navbar {
-        height: 80px;
-        padding: 0 1rem;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 90;
-    }
-
-    .navbar-header h3 {
-        font-size: 20px;
-    }
-
-    .navbar-search {
-        width: 180px;
-    }
-
-    .navbar-search p {
-        display: none;
-    }
-
-    .navbar-profile img {
-        width: 50px;
-        height: 50px;
-    }
-
-    /* Adjust cards layout */
-    .my-cards .cards {
-        justify-content: center;
-    }
-
-    .cards .card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    /* Adjust card list items */
-    .card-list .content .box {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.5rem;
-    }
-
-    .card-list .content .box .icon-wallet {
-        margin-bottom: 1rem;
-    }
-
-    .card-list .content .box .card-info {
-        width: 100%;
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 1rem;
-    }
-
-    .card-list .content .box .card-detail {
-        width: 100%;
-    }
-
-    .card-list .content .box .card-detail button {
-        width: 100%;
-    }
-
-    /* Adjust form inputs */
-    .add-card .content .row-1>div,
-    .add-card .content .row-2>div {
-        min-width: 100%;
-    }
-
-    /* Adjust settings items */
-    .card-setting .content .setting-item {
-        padding: 1rem 0.5rem;
+    .card-list .card-type,
+    .card-list .card-bank,
+    .card-list .card-number,
+    .card-list .card-nama {
+        min-width: 120px;
+        /* Give more space */
     }
 }
 
-/* ============================================= */
-/* RESPONSIVE DESIGN - MOBILE (480px) */
-/* ============================================= */
-@media (max-width: 480px) {
-
-    /* Further adjust navbar */
-    .navbar-search {
-        display: none;
-    }
-
-    /* Adjust card layout */
-    .cards .card {
-        height: 180px;
-    }
-
-    /* Adjust card list */
-    .card-list .content .box .card-info {
-        grid-template-columns: 1fr;
-    }
-
-    /* Adjust form button */
-    .add-card .content .btn {
-        width: 100%;
-    }
-
-    /* Hide some elements on very small screens */
-    .navbar-setting,
-    .navbar-notification {
-        display: none;
-    }
-}
